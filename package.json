@@ -1,0 +1,12 @@
+{
+  "name": "fancywebsite",
+  "version": "1.0.0",
+  "description": "This is a website exploring various CSS and JS animations",
+  "main": "./out/index.js",
+  "scripts": {
+    "start": "tsc && node ./out/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Girish Uppal",
+  "license": "ISC"
+}
