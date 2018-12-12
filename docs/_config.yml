@@ -1,2 +1,2 @@
 baseurl: "/FancyWeb"
-include: /css/
+include: "/css/"
