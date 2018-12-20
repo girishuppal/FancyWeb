@@ -10,19 +10,22 @@
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src='../js/jquery-3.2.1.slim.min.js'></script>
-        <script src='../js/bootstrap.min.js'></script>
         <script src='../js/popper.min.js'></script>
-        <!-- Scripts -->
+        <script src='../js/bootstrap.min.js'></script>
+        <!-- for nav-placeholder -->
+        <script src="../js/jquery-1.10.2.js"></script>
+
         <script>
-            function goBack() {
-                window.history.back();
-            }
+            $(function(){
+                $("#nav-placeholder").load("Navigation.html");
+            });
         </script>
     </head>
+
     <body>
+        <div id="nav-placeholder"></div>
+        <br />
         <h1>Carousel</h1>
-        <br /><br />
-        <button onclick='goBack()'>Go Back</button>
         <br /><br />
         
         <h2>Slides Only</h2>

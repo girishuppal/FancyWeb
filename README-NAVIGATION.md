@@ -1,0 +1,1 @@
+After completing TO DO pages, please remove '*' in index.html AND Navigation.html
