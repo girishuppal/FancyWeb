@@ -12,66 +12,20 @@
         <script src='../js/jquery-3.2.1.slim.min.js'></script>
         <script src='../js/popper.min.js'></script>
         <script src='../js/bootstrap.min.js'></script>
-        <!-- Scripts -->
+        <!-- for nav-placeholder -->
+        <script src="../js/jquery-1.10.2.js"></script>
+
         <script>
-            function goBack() {
-                window.history.back();
-            }
+            $(function(){
+                $("#nav-placeholder").load("Navigation.html");
+            });
         </script>
     </head>
+
     <body>
-        <!-- <h1>Jumbotron</h1>
-        <br /><br />
-        <button onclick='goBack()'>Go Back</button>
-        <br /><br /> -->
-        <div class="jumbotron jumbotron-fluid" style="margin:0">
-            <div class="container">
-                <h1 class="display-4">Jumbotron</h1>
-            </div>
-        </div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="collapse navbar-collapse" id="navbarColor01">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="../index.html">Home</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li> -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Components
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="html/alerts.html">Alerts</a>
-                        <a class="dropdown-item" href="html/badge.html">Badge</a> 
-                        <a class="dropdown-item" href="html/breadcrumb.html">Breadcrumb</a> 
-                        <a class="dropdown-item" href="html/buttons.html">Buttons</a>
-                        <a class="dropdown-item" href="html/buttongroup.html">Button Group</a>
-                        <a class="dropdown-item" href="html/card.html">Card*</a>
-                        <a class="dropdown-item" href="html/carousel.html">Carousel</a>
-                        <a class="dropdown-item" href="html/collapse.html">Collapse</a>
-                        <a class="dropdown-item" href="html/dropdowns.html">Dropdowns</a>  
-                        <a class="dropdown-item" href="html/forms.html">Forms*</a>
-                        <a class="dropdown-item" href="html/inputgroup.html">Input Group*</a>
-                        <a class="dropdown-item" href="html/jumbotron.html">Jumbotron</a> 
-                        <a class="dropdown-item" href="html/listgroup.html">List Group*</a>
-                        <a class="dropdown-item" href="html/modal.html">Modal Pop Up</a>
-                        <a class="dropdown-item" href="html/navs.html">Navs*</a>
-                        <a class="dropdown-item" href="html/nav.html">Navbar</a>
-                        <a class="dropdown-item" href="html/pagination.html">Pagination*</a>
-                        <a class="dropdown-item" href="html/popovers.html">Popovers*</a>
-                        <a class="dropdown-item" href="html/progress.html">Progress*</a>   
-                        <a class="dropdown-item" href="html/scrollspy.html">Scrollspy*</a>
-                        <a class="dropdown-item" href="html/tooltip.html">Tool Tip</a>
-                        </div>
-                    </li>
-                    <!-- <li class="nav-item">
-                    <a class="nav-link" href="#">Placeholder</a>
-                    </li> -->
-                </ul>
-            </div>
-        </nav>
+        <div id="nav-placeholder"></div>
+        <br />
+
         <div class="jumbotron" style="margin:2em;">
             <h1 class="display-4">Hello, world!</h1>
             <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
