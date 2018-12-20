@@ -1,29 +1,32 @@
 <!doctype html>
 <html lang='en'>
     <head>
-    <!-- Required meta tags -->
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
-    <title>Dropdowns</title>
-    <!-- Bootstrap CSS -->
-    <link rel='stylesheet' href='../css/bootstrap.min.css'>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script type="text/javascript" src='../js/popper.min.js'></script>
-    <script type="text/javascript" src='../js/jquery-3.2.1.slim.min.js'></script>
-    <script type="text/javascript" src='../js/bootstrap.min.js'></script>
-    
-    <!-- Scripts -->
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
+      <!-- Required meta tags -->
+      <meta charset='utf-8'>
+      <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+      <title>Dropdowns</title>
+      <!-- Bootstrap CSS -->
+      <link rel='stylesheet' href='../css/bootstrap.min.css'>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script type="text/javascript" src='../js/jquery-3.2.1.slim.min.js'></script>
+      <script type="text/javascript" src='../js/popper.min.js'></script>
+      <script type="text/javascript" src='../js/bootstrap.min.js'></script>
+      
+      <!-- for nav-placeholder -->
+      <script src="../js/jquery-1.10.2.js"></script>
+
+      <script>
+          $(function(){
+              $("#nav-placeholder").load("Navigation.html");
+          });
+      </script>
     </head>
+    
     <body>
+        <div id="nav-placeholder"></div>
+        <br />
         <h1>Dropdowns</h1>
-        <br /><br />
-        <button onclick='goBack()'>Go Back</button>
         <br /><br />
 
         <h2>Split Button Drowndowns</h2>
