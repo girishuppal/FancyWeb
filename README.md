@@ -1,7 +1,14 @@
 # About Project
-- To be added
+- This project will explore all the components needed to build a web site.
+
+First component to be explored is Bootstrap
+Second component to be explored is Fontawesome
 
 
+# Bootstrap
+Components explored are:
+????
 
-# Notes
-- When self hosting project, please comment the 'For hosting on GitHub Pages' in index.html and uncomment the part that says 'For self hosting'.
+#Font Awesome
+Components explored are:
+????
