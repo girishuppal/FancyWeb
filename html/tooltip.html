@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css" <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="../js/jquery-3.2.1.slim.min.js"></script>
-
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <title>Document</title>
@@ -18,9 +17,19 @@
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
+        <!-- for nav-placeholder -->
+        <script src="../js/jquery-1.10.2.js"></script>
+
+    <script>
+        $(function(){
+            $("#nav-placeholder").load("Navigation.html");
+        });
+    </script>
 </head>
 
 <body>
+    <div id="nav-placeholder"></div>
+    <br />
     <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
         Tooltip on top
     </button>

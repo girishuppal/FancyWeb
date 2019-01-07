@@ -1,33 +1,120 @@
 <html>
-<head> <title> This is the first html page </title></head>
-<body>
+    <head> 
+        <title> This is the first html page </title>
+        <!-- For hosting on GitHub Pages -->
+            <!-- Bootstrap CSS -->
+            <link rel='stylesheet' href='../FancyWeb/css/bootstrap.min.css'>
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src='../FancyWeb/js/jquery-3.2.1.slim.min.js'></script>
+            <script src='../FancyWeb/js/popper.min.js'></script>
+            <script src='../FancyWeb/js/bootstrap.min.js'></script>
+        <!-- End for hosting on GitHub Pages -->
 
-    <h1> Lets start collaborating on this ambitious project !</h1>
-    
-    <br /><br />
-    <a href="html/modal.html">Modal Pop Up</a>
-    <br /><br />
-    <a href="html/nav.html">Navbar</a>
-    <br /><br />   
-    <a href="html/badge.html">Badge</a> 
-    <br /><br />   
-    <a href="html/breadcrumb.html">Breadcrumb</a> 
-    <br /><br />
-    <a href="html/buttons.html">Buttons</a>
-    <br /><br />
-    <a href="html/buttongroup.html">Button Group</a>
-    <br /><br />
-    <a href="html/carousel.html">Carousel</a>
-    <br /><br />
-    <a href="html/Collapse.html">Collapse</a>
-    <br /><br />
-    <a href="html/dropdowns.html">Dropdowns</a>  
-    <br /><br />    
-    <a href="html/alerts.html">Alerts</a>
-    <br /><br />    
-    <a href="html/tooltip.html">Tool Tip</a>
-    
+        <!-- For self hosting -->
+            <!-- <link rel='stylesheet' href='/css/bootstrap.min.css'>
+            <script src='/js/jquery-3.2.1.slim.min.js'></script>
+            <script src='/js/popper.min.js'></script>
+            <script src='/js/bootstrap.min.js'></script> -->
+        <!-- End for self hosting -->
 
-</body>
 
+    </head>
+    <body>
+
+        <div class="jumbotron jumbotron-fluid" style="margin-bottom: 0">
+            <div class="container">
+                <h1 class="display-4">FancyWeb Project</h1>
+                <p class="lead">Lets start collaborating on this ambitious project !</p>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li> -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Components
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="html/alerts.html">Alerts</a>
+                        <a class="dropdown-item" href="html/badge.html">Badge</a> 
+                        <a class="dropdown-item" href="html/breadcrumb.html">Breadcrumb</a> 
+                        <a class="dropdown-item" href="html/buttons.html">Buttons</a>
+                        <a class="dropdown-item" href="html/buttongroup.html">Button Group</a>
+                        <a class="dropdown-item" href="html/card.html">Card*</a>
+                        <a class="dropdown-item" href="html/carousel.html">Carousel</a>
+                        <a class="dropdown-item" href="html/collapse.html">Collapse</a>
+                        <a class="dropdown-item" href="html/dropdowns.html">Dropdowns</a>  
+                        <a class="dropdown-item" href="html/forms.html">Forms*</a>
+                        <a class="dropdown-item" href="html/inputgroup.html">Input Group*</a>
+                        <a class="dropdown-item" href="html/jumbotron.html">Jumbotron</a> 
+                        <a class="dropdown-item" href="html/listgroup.html">List Group*</a>
+                        <a class="dropdown-item" href="html/modal.html">Modal Pop Up</a>
+                        <a class="dropdown-item" href="html/navs.html">Navs*</a>
+                        <a class="dropdown-item" href="html/nav.html">Navbar</a>
+                        <a class="dropdown-item" href="html/pagination.html">Pagination*</a>
+                        <a class="dropdown-item" href="html/popovers.html">Popovers*</a>
+                        <a class="dropdown-item" href="html/progress.html">Progress</a>   
+                        <a class="dropdown-item" href="html/scrollspy.html">Scrollspy</a>
+                        <a class="dropdown-item" href="html/tooltip.html">Tool Tip</a>
+                        </div>
+                    </li>
+                    <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">Placeholder</a>
+                    </li> -->
+                </ul>
+            </div>
+        </nav>
+
+        <!-- <a href="html/alerts.html">Alerts</a>
+        <br /><br />   
+        <a href="html/badge.html">Badge</a> 
+        <br /><br />   
+        <a href="html/breadcrumb.html">Breadcrumb</a> 
+        <br /><br />
+        <a href="html/buttons.html">Buttons</a>
+        <br /><br />
+        <a href="html/buttongroup.html">Button Group</a>
+        <br /><br />
+        <a href="html/card.html">Card*</a>
+        <br /><br />
+        <a href="html/carousel.html">Carousel</a>
+        <br /><br />
+        <a href="html/collapse.html">Collapse</a>
+        <br /><br />
+        <a href="html/dropdowns.html">Dropdowns</a>  
+        <br /><br />   
+        <a href="html/forms.html">Forms*</a>
+        <br /><br />
+        <a href="html/inputgroup.html">Input Group*</a>
+        <br /><br />
+        <a href="html/jumbotron.html">Jumbotron*</a> 
+        <br /><br /> 
+        <a href="html/listgroup.html">List Group*</a>
+        <br /><br /> 
+        <a href="html/modal.html">Modal Pop Up</a>
+        <br /><br />
+        <a href="html/navs.html">Navs*</a>
+        <br /><br />
+        <a href="html/nav.html">Navbar</a>
+        <br /><br />   
+        <a href="html/pagination.html">Pagination*</a>
+        <br /><br />   
+        <a href="html/popovers.html">Popovers*</a>
+        <br /><br />
+        <a href="html/progress.html">Progress*</a>   
+        <br /><br />   
+        <a href="html/scrollspy.html">Scrollspy*</a>
+        <br /><br />   
+        <a href="html/tooltip.html">Tool Tip</a>
+        <br /><br /> -->
+        
+    </body>
 </html>
