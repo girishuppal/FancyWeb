@@ -1,14 +1,11 @@
 # About Project
 - This project will explore all the components needed to build a web site.
 
-First component to be explored is Bootstrap
-Second component to be explored is Fontawesome
 
-
-# Bootstrap
+## Bootstrap
 Components explored are:
-????
+-Alerts
 
-#Font Awesome
+## Font Awesome
 Components explored are:
 ????
