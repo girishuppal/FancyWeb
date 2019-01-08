@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./assets/css/all.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rotate</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css"> 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../../js/jquery-3.2.1.slim.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/popper.min.js"></script>
+    <!-- for nav-placeholder -->
+    <script src="../../js/jquery-1.10.2.js"></script>
+
+    <script>
+        $(function(){
+            $("#nav-placeholder").load("../../html/bootstrap/Navigation.html");
+        });
+    </script>
+</head>
+    
+    <body>
+        <div id="nav-placeholder"></div>
+        <br />
+
+        <h2>Rotate</h2>
+        <br />
+
+        <div class="fa-4x">
+            <i class="fas fa-snowman"></i>
+            <i class="fas fa-snowman fa-rotate-90"></i>
+            <i class="fas fa-snowman fa-rotate-180"></i>
+            <i class="fas fa-snowman fa-rotate-270"></i>
+            <i class="fas fa-snowman fa-flip-horizontal"></i>
+            <i class="fas fa-snowman fa-flip-vertical"></i>
+        </div>
+        <br />
+
+        <table>
+            <colgroup><col> <col></colgroup>
+            <thead>
+                <tr>
+                    <th style="text-align: left;">Class</th>
+                    <th style="text-align: left;">Rotation Amount</th>
+                </tr>
+            </thead> 
+            <tr>
+                <td style="text-align: left;"><code class="inline">fa-rotate-90</code></td>
+                <td style="text-align: left;">90°</td>
+            </tr> 
+            <tr>
+                <td style="text-align: left;"><code class="inline">fa-rotate-180</code></td>
+                <td style="text-align: left;">180°</td>
+            </tr> 
+            <tr>
+                <td style="text-align: left;"><code class="inline">fa-rotate-270</code></td>
+                <td style="text-align: left;">270°</td></tr> <tr><td style="text-align: left;"><code class="inline">fa-flip-horizontal</code></td>
+                <td style="text-align: left;">mirrors icon horizontally</td>
+            </tr> 
+            <tr>
+                <td style="text-align: left;"><code class="inline">fa-flip-vertical</code></td>
+                <td style="text-align: left;">mirrors icon vertically</td>
+            </tr>
+        </table>
+
+        
+    </body>
+
+</html>
