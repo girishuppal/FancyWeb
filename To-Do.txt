@@ -1,0 +1,7 @@
+font awesome pages to be fa-pagename
+fix links when pages are renamed 
+
+add font awesome components/styles to onenote
+each in seperate pages 
+
+make the diff sections independant of each other (exception is menu/nav)
