@@ -5,3 +5,5 @@ add font awesome components/styles to onenote
 each in seperate pages 
 
 make the diff sections independant of each other (exception is menu/nav)
+
+In head tag segregate bootstrap and font awesome code 
