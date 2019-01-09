@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../assets/css/all.css">
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stacking Icons</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css"> 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/jquery-3.2.1.slim.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <!-- for nav-placeholder -->
+    <script src="../js/jquery-1.10.2.js"></script>
+
+    <script>
+        $(function(){
+            $("#nav-placeholder").load("fa-navigation.html");
+        });
+    </script>
+</head>
+    
+    <body>
+        <div id="nav-placeholder"></div>
+        <br />
+
+        <h2>Stacking Icons</h2>
+        <br />
+
+        <span class="fa-stack fa-2x">
+        <i class="fas fa-square fa-stack-2x"></i>
+        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+        </span>
+        <span class="fa-stack fa-2x">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-flag fa-stack-1x fa-inverse"></i>
+        </span>
+        <span class="fa-stack fa-2x">
+        <i class="fas fa-square fa-stack-2x"></i>
+        <i class="fas fa-terminal fa-stack-1x fa-inverse"></i>
+        </span>
+        <span class="fa-stack fa-4x">
+        <i class="fas fa-square fa-stack-2x"></i>
+        <i class="fas fa-terminal fa-stack-1x fa-inverse"></i>
+        </span>
+        <span class="fa-stack fa-2x">
+        <i class="fas fa-camera fa-stack-1x"></i>
+        <i class="fas fa-ban fa-stack-2x" style="color:Tomato"></i>
+        </span>
+        <br />
+
+        <h2>Aligning</h2>
+        <i class="far fa-circle fa-2x"></i>
+        <span class="fa-stack" style="vertical-align: top;">
+        <i class="far fa-circle fa-stack-2x"></i>
+        <i class="fas fa-flag fa-stack-1x"></i>
+        </span>
+        <span class="fa-stack" style="vertical-align: top;">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-flag fa-stack-1x fa-inverse"></i>
+        </span>
+        <i class="far fa-circle fa-2x"></i>  
+          
+
+    </body>
+
+</html>
