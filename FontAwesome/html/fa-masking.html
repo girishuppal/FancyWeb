@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <link rel="stylesheet" href="../assets/css/all.css"> -->
+    <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Masking</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css"> 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../js/jquery-3.2.1.slim.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <!-- for nav-placeholder -->
+    <script src="../js/jquery-1.10.2.js"></script>
+
+    <script>
+        $(function(){
+            $("#nav-placeholder").load("fa-navigation.html");
+        });
+    </script>
+</head>
+    
+    <body>
+        <div id="nav-placeholder"></div>
+        <br />
+
+        <h2>Masking</h2>
+        <br />
+
+        <div class="fa-4x">
+            <i class="fas fa-pencil-alt" style="background:MistyRose"></i>
+            <i class="fab fa-facebook-f" data-fa-transform="shrink-3.5 down-1.6 right-1.25" style="background:MistyRose"></i>
+            <i class="fas fa-headphones" data-fa-mask="fas fa-square" style="background:MistyRose"></i>
+            <i class="fas fa-mask" data-fa-transform="shrink-3 up-1" data-fa-mask="fas fa-circle" style="background:MistyRose"></i>
+        </div>
+
+        <div class="fa-4x">
+            <i class="fas fa-pencil-alt" data-fa-transform="shrink-10 up-.5" data-fa-mask="fas fa-comment" style="background:MistyRose"></i>
+            <i class="fab fa-facebook-f" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle" style="background:MistyRose"></i>
+            <i class="fas fa-headphones" data-fa-transform="shrink-6" data-fa-mask="fas fa-square" style="background:MistyRose"></i>
+            <i class="fas fa-mask" data-fa-transform="shrink-3 up-1" data-fa-mask="fas fa-circle" style="background:MistyRose"></i>
+        </div>
+
+    </body>
+
+</html>
