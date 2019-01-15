@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sweet Alert</title>
+    <!--########## SWEET ALERT ##########-->
+    <script src="../js/sweetalert.min.js"></script>
+    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+    <!--########## END SWEET ALERT ##########-->
+
+    <!-- Bootstrap CSS -->
+    <link rel='stylesheet' href='../css/bootstrap.min.css'>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src='../js/jquery-3.2.1.slim.min.js'></script>
+    <script src='../js/popper.min.js'></script>
+    <script src='../js/bootstrap.min.js'></script>
+    <!-- for nav-placeholder -->
+    <script src="../js/jquery-1.10.2.js"></script>
+
+<script>
+    $(function(){
+        $("#nav-placeholder").load("sa-Navigation.html");
+    });    
+</script>
+
+</head>
+<body>
+    <!-- <div id="nav-placeholder"></div> -->
+    <br />
+        
+    <button onclick="Ex1()">Preview Example 1</button>
+    <br /><br />
+
+    <button onclick="Ex2()">Preview Example 2</button>
+    <br /><br />
+
+    <button onclick="Ex3_1()">Preview Example 3.1</button>&nbsp;<button onclick="Ex3_2()">Preview Example 3.2</button>&nbsp;<button onclick="Ex3_3()">Preview Example 3.3</button>&nbsp;<button onclick="Ex3_4()">Preview Example 3.4</button>
+    <br />
+
+    <script>
+            function Ex1() {
+                swal("Success Message Title")
+            }
+
+            function Ex2() {
+                swal("Here's the title!", "...and here's the text!");
+            }
+
+            function Ex3_1(){
+                swal("Success Icon", "You clicked the button!", "success");
+            }
+
+            function Ex3_2(){
+                swal("Warning Icon", "You clicked the button!", "warning");
+            }
+
+            function Ex3_3(){
+                swal("Error Icon", "You clicked the button!", "error");
+            }
+
+            function Ex3_4(){
+                swal("Info Icon", "You clicked the button!", "info");
+            }
+</script>
+
+</body>
+</html>
