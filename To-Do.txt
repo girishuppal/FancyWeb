@@ -4,3 +4,5 @@ each in seperate pages
 In head tag segregate bootstrap and font awesome code 
 
 When updating Navigation - update in index.html and _assets/html/Navigation.html
+
+PENDING tag added to folder names after completion fix Navigation links

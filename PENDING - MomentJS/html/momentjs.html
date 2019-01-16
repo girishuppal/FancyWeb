@@ -5,6 +5,10 @@
         <meta charset='utf-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
         <title>MomentJS</title>
+
+        <!-- MomentJS -->
+        <script src="../js/moment-with-locales.js"></script>
+
         <!-- Bootstrap CSS -->
         <link rel='stylesheet' href='../../_assets/css/bootstrap.min.css'>
         <!-- Optional JavaScript -->
@@ -19,12 +23,23 @@
              $(function(){
                 $("#nav-placeholder").load("../../_assets/html/Navigation.html");
              });
+
+             $(document).ready(function(){a()});
+
+             var a = function updateDateTime(){
+                 var dt = moment().toDate();
+                 document.getElementById('datetime').innerHTML = dt;
+                 setTimeout(a, 1000);
+             }
         </script>
     </head>
 
     <body>
         <div id="nav-placeholder"></div>
         <br />
-            TO DO
+            
+        <h2>Display Date Time</h2>
+        <p>Curent date and time is <span id="datetime"></span></p>
+
     </body>
 </html>
