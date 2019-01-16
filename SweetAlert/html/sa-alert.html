@@ -11,14 +11,14 @@
     <!--########## END SWEET ALERT ##########-->
 
     <!-- Bootstrap CSS -->
-    <link rel='stylesheet' href='../css/bootstrap.min.css'>
+    <link rel='stylesheet' href='../../css/bootstrap.min.css'>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src='../js/jquery-3.2.1.slim.min.js'></script>
-    <script src='../js/popper.min.js'></script>
-    <script src='../js/bootstrap.min.js'></script>
+    <script src='../../js/jquery-3.2.1.slim.min.js'></script>
+    <script src='../../js/popper.min.js'></script>
+    <script src='../../js/bootstrap.min.js'></script>
     <!-- for nav-placeholder -->
-    <script src="../js/jquery-1.10.2.js"></script>
+    <script src="../../js/jquery-1.10.2.js"></script>
 
 <script>
     $(function(){
@@ -28,17 +28,29 @@
 
 </head>
 <body>
-    <!-- <div id="nav-placeholder"></div> -->
+    <div id="nav-placeholder"></div>
     <br />
-        
-    <button onclick="Ex1()">Preview Example 1</button>
+    
+    <h2>Alerts</h2>
+    <button onclick="Ex1()">Preview Title Only</button>
     <br /><br />
 
-    <button onclick="Ex2()">Preview Example 2</button>
+    <button onclick="Ex2()">Preview Title / Text</button>
     <br /><br />
 
-    <button onclick="Ex3_1()">Preview Example 3.1</button>&nbsp;<button onclick="Ex3_2()">Preview Example 3.2</button>&nbsp;<button onclick="Ex3_3()">Preview Example 3.3</button>&nbsp;<button onclick="Ex3_4()">Preview Example 3.4</button>
-    <br />
+    <button onclick="Ex3_1()">Preview Success Icon / Title / Text</button>&nbsp;<button onclick="Ex3_2()">Preview Warning Icon / Title / Text</button>&nbsp;<button onclick="Ex3_3()">Preview Error Icon / Title / Text</button>&nbsp;<button onclick="Ex3_4()">Preview Info Icon / Title / Text</button>
+    <br /><br />
+
+    <h2>Options</h2>
+    <button onclick="Ex4()">Customise Button</button>
+    <br /><br />
+
+    <h2>Promises</h2>
+    <button onclick="Ex5()">Using Promises</button>&nbsp;<button onclick="Ex5_1()">Preview Delete File</button>
+    <br /><br />
+
+    <h2>Fun Example</h2>
+    <button onclick="Ex6()">Preview Encounter Pokemon</button>
 
     <script>
             function Ex1() {
@@ -63,6 +75,69 @@
 
             function Ex3_4(){
                 swal("Info Icon", "You clicked the button!", "info");
+            }
+
+            function Ex4(){
+                swal({
+                    title: "Good job!",
+                    text: "You clicked the button!",
+                    icon: "success",
+                    buttons: ["Oh noez!", "Aww yiss!"],
+                });
+            }
+
+            function Ex5(){
+                swal("Click on either the button or outside the modal.")
+                .then((value) => {
+                    swal(`The returned value is: ${value}`);
+                });
+            }
+
+            function Ex5_1(){
+                swal({
+                    title: "Are you sure?",
+                    text: "Once deleted, you will not be able to recover this imaginary file!",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        swal("Poof! Your imaginary file has been deleted!", {
+                            icon: "success",
+                        });
+                    } else {
+                        swal("Your imaginary file is safe!");
+                    }
+                    });
+            }
+
+            function Ex6(){
+                swal("A wild Pikachu appeared! What do you want to do?", {
+                buttons: {
+                    cancel: "Run away!",
+                    catch: {
+                    text: "Throw Pokéball!",
+                    value: "catch",
+                    },
+                    defeat: true,
+                },
+                })
+                .then((value) => {
+                switch (value) {
+                
+                    case "defeat":
+                    swal("Pikachu fainted! You gained 500 XP!");
+                    break;
+                
+                    case "catch":
+                    swal("Gotcha!", "Pikachu was caught!", "success");
+                    break;
+                
+                    default:
+                    swal("Got away safely!");
+                }
+                });
             }
 </script>
 
