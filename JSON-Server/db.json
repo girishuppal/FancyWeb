@@ -1,0 +1,38 @@
+{
+  "employee": [
+    {
+      "id": 0,
+      "name": "Girish"
+    },
+    {
+      "id": 1,
+      "name": "John"
+    },
+    {
+      "id": 0,
+      "name": "Justin"
+    },
+    {
+      "name": "Frank",
+      "id": 2
+    },
+    {
+      "name": "Gilbert",
+      "id": 3
+    }
+  ],
+  "agents": [
+    {
+      "role": 12,
+      "isActive": true
+    },
+    {
+      "role": 18,
+      "isActive": false
+    },
+    {
+      "role": 50,
+      "isActive": true
+    }
+  ]
+}
