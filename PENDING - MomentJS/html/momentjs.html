@@ -24,12 +24,34 @@
                 $("#nav-placeholder").load("../../_assets/html/Navigation.html");
              });
 
-             $(document).ready(function(){a()});
+             $(document).ready(function(){
+                 a();
+                 add();
+                 subtract();
+                 difference();
+             });
 
              var a = function updateDateTime(){
-                 var dt = moment().toDate();
+                 var dt = moment();
                  document.getElementById('datetime').innerHTML = dt;
                  setTimeout(a, 1000);
+             }
+
+             function add(){
+                var date = moment().add(7, 'days').format("DD/MM/YYYY");
+                document.getElementById('add').innerHTML = date;
+             }
+
+             function subtract(){
+                var date = moment().subtract(1, 'days').format("DD/MM/YYYY");
+                document.getElementById('subtract').innerHTML = date;
+             }
+
+             function difference(){
+                var date1 = moment("17/10/1993", "DD/MM/YYYY");
+                var date2 = moment();
+                var diff = date2.diff(date1, 'days');
+                document.getElementById('difference').innerHTML = diff;
              }
         </script>
     </head>
@@ -40,6 +62,14 @@
             
         <h2>Display Date Time</h2>
         <p>Curent date and time is <span id="datetime"></span></p>
+        <br /><br />
 
+        <h2>Add / Subtract Time</h2>
+        <p>Current date add 7 days <span id="add"></span></p>
+        <p>Current date subtract 1 day <span id="subtract"></span></p>
+        <br /><br />
+
+        <h2>Difference</h2>
+        <p>Days from 17th October 1993 to now is <span id="difference"></span> days</p>
     </body>
 </html>
