@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+        <title>F6-Navigation</title>
+        <!-- Bootstrap CSS -->
+        <link rel='stylesheet' href='../../_assets/css/bootstrap.min.css'>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src='../../_assets/js/jquery-3.2.1.slim.min.js'></script>
+        <script src='../../_assets/js/popper.min.js'></script>
+        <script src='../../_assets/js/bootstrap.min.js'></script>
+        <!-- for nav-placeholder -->
+        <script src='../../_assets/js/jquery-1.10.2.js'></script>
+        <script>
+            $(function(){
+                $('#nav-placeholder').load('../../_assets/html/Navigation.html');
+            });
+        </script>
+
+        <!-- Foundation 6 -->
+        <link rel="stylesheet" href="../css/foundation.min.css">
+        <script src="../js/foundation.min.js"></script>
+
+    </head>
+    <body>
+        <div id='nav-placeholder'></div>
+        <br />
+
+        <h2>Top Bar</h2>
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <ul class="dropdown menu" data-dropdown-menu>
+                <li class="menu-text">Site Title</li>
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="menu">
+                <li><input type="search" placeholder="Search"></li>
+                <li><button type="button" class="button">Search</button></li>
+                </ul>
+            </div>
+        </div>
+        <br /><br />
+
+        <h2>Active State</h2>
+        <ul class="menu">
+            <li class="is-active"><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Nachos</a></li>
+        </ul>
+        <br /><br />   
+        
+        <h2>Breadcrumb</h2>
+        <nav aria-label="You are here:" role="navigation">
+            <ul class="breadcrumbs">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li class="disabled">Gene Splicing</li>
+                <li>
+                <span class="show-for-sr">Current: </span> Cloning
+                </li>
+            </ul>
+        </nav>
+
+    </body>
+</html>
