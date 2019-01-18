@@ -5,11 +5,6 @@
         <meta charset='utf-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
         <title>F6-Button</title>
-
-        <!-- Foundation 6 -->
-        <link rel="stylesheet" href="../css/foundation.min.css">
-        <script src="../js/foundation.min.js"></script>
-
         <!-- Bootstrap CSS -->
         <link rel='stylesheet' href='../../_assets/css/bootstrap.min.css'>
         <!-- Optional JavaScript -->
@@ -24,6 +19,11 @@
                 $('#nav-placeholder').load('../../_assets/html/Navigation.html');
             });
         </script>
+
+        <!-- Foundation 6 -->
+        <link rel="stylesheet" href="../css/foundation.min.css">
+        <script src="../js/foundation.min.js"></script>
+
     </head>
     <body>
         <div id='nav-placeholder'></div>
@@ -34,5 +34,33 @@
         <a class="button success" href="#">Success</a>
         <a class="button alert" href="#">Alert</a>
         <a class="button warning" href="#">Warning</a>
+        <br /><br />
+
+        <h2>Disabled Buttons</h2>
+        <a class="button hollow disabled" href="#" aria-disabled>Disabled</a>
+        <button type="button" class="button hollow primary" disabled>Disabled</button>
+        <button type="button" class="button hollow secondary" disabled>Disabled</button>
+        <button type="button" class="button hollow success" disabled>Disabled</button>
+        <button type="button" class="button hollow alert" disabled>Disabled</button>
+        <button type="button" class="button hollow warning" disabled>Disabled</button>
+        <br /><br />
+
+        <h2>Clear Style</h2>
+        <a class="clear button" href="#">Primary</a>
+        <a class="clear button secondary" href="#">Secondary</a>
+        <a class="clear button success" href="#">Success</a>
+        <a class="clear button alert" href="#">Alert</a>
+        <a class="clear button warning" href="#">Warning</a>
+        <a class="clear button" href="#" disabled>Disabled</a>
+        <br /><br />
+
+        <h2>Close Button</h2>
+        <div class="callout col-2" data-closable>
+            <p>You can so totally close this!</p>
+            <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
     </body>
 </html>
