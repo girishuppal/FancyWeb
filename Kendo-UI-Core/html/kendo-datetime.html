@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+        <title>Kendo-UI-Core DateTime Picker</title>
+        <!-- Bootstrap CSS -->
+        <link rel='stylesheet' href='../../_assets/css/bootstrap.min.css'>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src='../../_assets/js/jquery-3.2.1.slim.min.js'></script>
+        <script src='../../_assets/js/popper.min.js'></script>
+        <script src='../../_assets/js/bootstrap.min.js'></script>
+        <!-- for nav-placeholder -->
+        <script src='../../_assets/js/jquery-1.10.2.js'></script>
+        <script>
+            $(function(){
+                $('#nav-placeholder').load('../../_assets/html/Navigation.html');
+            });
+        </script>
+
+        <!-- KendoUI Core -->
+        <!-- CDN -->
+        <!-- <link href="http://kendo.cdn.telerik.com/2014.2.716/styles/kendo.common.min.css" rel="stylesheet" />
+        <link href="http://kendo.cdn.telerik.com/2014.2.716/styles/kendo.default.min.css" rel="stylesheet" />
+        <script src="http://kendo.cdn.telerik.com/2014.2.716/js/jquery.min.js"></script>
+        <script src="http://kendo.cdn.telerik.com/2014.2.716/js/kendo.ui.core.min.js"></script> -->
+        <!-- Self-Hosted -->
+        <link rel="stylesheet" href="../css/kendo.common.min.css">
+        <link rel="stylesheet" href="../css/kendo.default.min.css">
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/kendo.ui.core.min.js"></script>
+
+    </head>
+    <body>
+        <div id='nav-placeholder'></div>
+        <br />
+        <h2>DateTime Picker</h2>
+        <br /><br />
+
+        <div class="col-2">
+            
+            <div class="demo-section k-content">
+                <input id="datetimepicker" title="datetimepicker" style="width: 100%;" />
+            </div>
+            
+            <script>
+                $(document).ready(function () {
+                    // create DateTimePicker from input HTML element
+                    $("#datetimepicker").kendoDateTimePicker({
+                        value: new Date(),
+                        dateInput: true
+                    });
+                });
+            </script>
+            
+        </div>
+        <br /><br />
+
+    </body>
+</html>
