@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+        <title>QRCodeJS</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel='stylesheet' href='../../_assets/css/bootstrap.min.css'>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src='../../_assets/js/jquery-3.2.1.slim.min.js'></script>
+        <script src='../../_assets/js/popper.min.js'></script>
+        <script src='../../_assets/js/bootstrap.min.js'></script>
+        <!-- for nav-placeholder -->
+        <script src='../../_assets/js/jquery-1.10.2.js'></script>
+        <script>
+            $(function(){
+                $('#nav-placeholder').load('../../_assets/html/Navigation.html');
+            });
+        </script>
+
+        <!-- QRCodeJS -->
+        <script src="../js/qrcode.min.js"></script>
+
+    </head>
+    <body>
+            
+        <div id='nav-placeholder'></div>
+        <br />
+        
+        <h2>QRCodeJS</h2>
+        <br /><br />
+        
+        <div class="col-4">
+            <h2>Basic QRCode</h2>
+            <div id="qrcode"></div>
+            <script>
+                new QRCode(document.getElementById("qrcode"), "http://www.cdm.com.au");
+            </script>
+        </div>
+        <br /><br />
+
+        <div class="col-4">
+            <h2>QRCode With Options</h2>
+            <div id="qrcode2"></div>
+            <script type="text/javascript">
+            var qrcode = new QRCode(document.getElementById("qrcode2"), {
+                text: "http://cdm.com.au",
+                width: 128,
+                height: 128,
+                colorDark : "#000000",
+                colorLight : "#ffffff",
+                correctLevel : QRCode.CorrectLevel.H
+            });
+            </script>
+        </div>
+    </body> 
+</html>
