@@ -4,7 +4,7 @@
         <!-- Required meta tags -->
         <meta charset='utf-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
-        <title>jQuery-Plyr</title>
+        <title>jQuery-TimelineJS</title>
         <!-- Bootstrap CSS -->
         <link rel='stylesheet' href='../../../_assets/css/bootstrap.min.css'>
         <!-- Optional JavaScript -->
@@ -20,34 +20,40 @@
             });
         </script>
 
-        <!-- Plyr -->
-        <link rel="stylesheet" href="../css/plyr.css">
-        <script src="../js/plyr.js"></script>
+        <!-- TimelineJS -->
+        <script src="../js/jquery-1.12.4.min.js"></script>
+        <script src="../js/timeline.min.js"></script>
+        <link rel="stylesheet" href="../css/timeline.min.css">
 
     </head>
     <body>
         <div id='nav-placeholder'></div>
         <br />
         
-        <h2>Audio</h2>
-        <audio id="player" controls>
-            <source src="../SampleAudio_0.7mb.mp3" type="audio/mp3">
-        </audio>
-        <br /><br />
-
-        <h2>Video</h2>
-        <div class="col-4">
-            <div class="plyr__video-embed" id="player">
-                <iframe src="https://www.youtube.com/embed/bTqVqk7FSmY?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen allowtransparency allow="autoplay"></iframe>
+        <h2>Timeline</h2>
+        <div class="timeline-container timeline-theme-1">
+            <div class="timeline js-timeline">
+              <div data-time="2017">
+                your content or markup
+              </div>
+              <div data-time="2016">
+                your content or markup
+              </div>
+              <div data-time="2015">
+                your content or markup
+              </div>
+              <div data-time="2014">
+                your content or markup
+              </div>
+              <div data-time="2013">
+                your content or markup
+              </div>
             </div>
         </div>
-        <br /><br />
 
-        <div class="col-4">
-            <video id="player" playsinline controls>
-                <source src="../SampleVideo_1280x720_10mb.mp4" type="video/mp4">        
-            </video>
-        </div>
-        <br /><br />
+        <script>
+            $('.js-timeline').Timeline();
+        </script>
+
     </body>
 </html>
