@@ -50,9 +50,17 @@
               </div>
             </div>
         </div>
-
+        <br /><br />
+        
         <script>
-            $('.js-timeline').Timeline();
+            //$('.js-timeline').Timeline();
+
+            $('.js-timeline').Timeline({
+                //itemClass: 'box-item',
+                //dotsPosition: 'top',
+                startItem: 'first',
+                autoplay: true,
+            });
         </script>
 
     </body>
