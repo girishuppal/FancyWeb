@@ -22,7 +22,6 @@
 
         <!-- WeatherJS -->
         <script src="../js/weather.js"></script>
-        <script src="../js/current.js"></script>
 
     </head>
     <body>
@@ -30,13 +29,23 @@
         <br />
         <h2>WeatherJS</h2>
 
+        <div id="weather"></div>
+        <div id="current"></div>
+
+
         <script>
-        Weather.getCurrent("Kansas City", function(current) {
-  console.log(
+            Weather.getForecast("Brisbane, AU", function(forecast) {
+            // console.log("Forecast High in Kelvin: " + forecast.high());
+            // console.log("Forecast High in Fahrenheit" + Weather.kelvinToFahrenheit(forecast.high()));
+            $( "#weather" ).html("Brisbane Forecast High in Celsius " + Weather.kelvinToCelsius(forecast.high()));
+            });
+
+            Weather.getCurrent("Brisbane, AU", function(current) {
+                $( "#current" ).html("Brisbane Currenrt Temperature " + current.temperature() + " " + current.conditions());
+                console.log(
     ["currently:",current.temperature(),"and",current.conditions()].join(" ")
   );
 });
-
         </script>
 
     </body>

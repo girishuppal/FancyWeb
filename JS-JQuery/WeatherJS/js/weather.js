@@ -6,6 +6,8 @@ if (isModule) {
 }
 
 var Weather = {Utils: {}};
+var myAPIKey = '537234cb5893232ca5d3ba28fccec94f'; // put your own apikey here. This one is invalid
+
 
 
 Weather.VERSION = "0.0.3";
@@ -32,12 +34,10 @@ var jsonp = Weather.Utils.jsonp = function (uri, callback){
   } );
 };
 
-Weather.setApiKey = function (apiKey) {
-  Weather.APIKEY = apiKey;
-};
+Weather.setApiKey = myAPIKey;
 
 Weather.getApiKey = function () {
-  return Weather.APIKEY;
+  return myAPIKey;
 };
 
 Weather.kelvinToFahrenheit = function (value) {
@@ -51,8 +51,8 @@ Weather.kelvinToCelsius = function (value) {
 Weather.getCurrent = function (city, callback) {
   var url = "http://api.openweathermap.org/data/2.5/forecast?q=" + encodeURIComponent(city) + "&cnt=1";
 
-  if (Weather.APIKEY) {
-    url = url + "&APPID=" + Weather.APIKEY;
+  if (myAPIKey) {
+    url = url + "&APPID=" + myAPIKey;
   } else {
     console.log('WARNING: You must set an apiKey for openweathermap');
   }
@@ -65,8 +65,8 @@ Weather.getCurrent = function (city, callback) {
 Weather.getForecast = function (city, callback) {
   var url = "http://api.openweathermap.org/data/2.5/forecast?q=" + encodeURIComponent(city) + "&cnt=1";
 
-  if (Weather.APIKEY) {
-    url = url + "&APPID=" + Weather.APIKEY;
+  if (myAPIKey) {
+    url = url + "&APPID=" + myAPIKey;
   } else {
     console.log('WARNING: You must set an apiKey for openweathermap');
   }
