@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+        <title>GlideJS</title>
+        <!-- Bootstrap CSS -->
+        <link rel='stylesheet' href='../../../_assets/css/bootstrap.min.css'>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src='../../../_assets/js/jquery-3.2.1.slim.min.js'></script>
+        <script src='../../../_assets/js/popper.min.js'></script>
+        <script src='../../../_assets/js/bootstrap.min.js'></script>
+        <!-- for nav-placeholder -->
+        <script src='../../../_assets/js/jquery-1.10.2.js'></script>
+        <script>
+            $(function(){
+                $('#nav-placeholder').load('../../../_assets/html/Navigation.html');
+            });
+        </script>
+
+        <!-- GldeJS -->
+        <link rel="stylesheet" href="../css/glide.core.min.css">
+        <link rel="stylesheet" href="../css/glide.theme.min.css">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="../js/glide.js"></script>
+
+    </head>
+    <body>
+        <div id='nav-placeholder'></div>
+        <br />
+        <h2>GlideJS</h2>
+
+        <div class="col-2 glide" style="border: 1px solid #000;">
+          <div data-glide-el="track" class="glide__track">
+            <ul class="glide__slides">
+              <li class="glide__slide" style="text-align: center">1</li>
+              <li class="glide__slide" style="text-align: center">2</li>
+              <li class="glide__slide" style="text-align: center">3</li>
+            </ul>
+          </div>
+        </div>
+
+        <script>
+          var glide = new Glide('.glide', {
+            type: 'carousel',
+            perView: 1,
+            focusAt: 'center',
+            breakpoints: {
+              800: {
+                perView: 1
+              },
+              480: {
+                perView: 1
+              }
+            }
+          })
+
+          glide.mount()      
+        </script>
+
+        <br /><br /><br />
+
+        <h2>Autoplay</h2>
+        <div id="options-autoplay" class="col-4" style="border: 1px solid #000;">
+            <div data-glide-el="track" class="glide__track">
+              <ul class="glide__slides">
+                <li class="glide__slide" style="text-align: center">1</li>
+                <li class="glide__slide" style="text-align: center">2</li>
+                <li class="glide__slide" style="text-align: center">3</li>
+              </ul>
+            </div>
+        </div>
+        <script>
+          var input = document.querySelector('#options-autoplay-input')
+
+          var glide = new Glide('#options-autoplay', {
+            autoplay: 1000,
+            hoverpause: false,
+            perView: 1
+          })
+
+          glide.mount()
+        </script>
+
+    </body>
+</html>
