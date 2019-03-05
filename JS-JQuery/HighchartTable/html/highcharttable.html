@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+        <title>High Chart Table</title>
+        <!-- Bootstrap CSS -->
+        <link rel='stylesheet' href='../../_assets/css/bootstrap.min.css'>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src='../../_assets/js/jquery-3.2.1.slim.min.js'></script>
+        <script src='../../_assets/js/popper.min.js'></script>
+        <script src='../../_assets/js/bootstrap.min.js'></script>
+        <!-- for nav-placeholder -->
+        <script src='../../_assets/js/jquery-1.10.2.js'></script>
+        <script>
+            $(function(){
+                $('#nav-placeholder').load('../../_assets/html/Navigation.html');
+            });
+        </script>
+
+        <!-- High Chart Table -->
+        <script src="../js/highcharttable-min.js"></script>
+
+    </head>
+    <body>
+        <div id='nav-placeholder'></div>
+        <br />
+        <pre>
+        HighchartsTable
+        The highchartsTable plugin is under MIT license.
+
+        Highcharts
+        In order to use HighchartsTable, you need to include the Highcharts Javascript library in your page which have a different license than highartsTable.
+
+        Highcharts is licensed for free for any personal or non-profit projects under the Creative Commons Attribution-NonCommercial 3.0 License.
+
+        For commercial, corporate or government use a license is required, which can be purchased on the highcharts.com site. See the license and pricing details directly on the Highcharts site for more details.
+        </pre>
+
+        <table class="highchart" data-graph-container-before="1" data-graph-type="column">
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Sales</th>
+                </tr>
+             </thead>
+             <tbody>
+                <tr>
+                    <td>January</td>
+                    <td>8000</td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td>12000</td>
+                </tr>
+            </tbody>
+          </table>
+
+        <script>
+            $(document).ready(function() {
+                $('table.highchart').highchartTable();
+            });
+        </script>
+    </body>
+</html>
