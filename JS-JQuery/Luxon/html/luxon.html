@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+        <title>Luxon</title>
+        <!-- Bootstrap CSS -->
+        <link rel='stylesheet' href='../../../_assets/css/bootstrap.min.css'>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src='../../../_assets/js/jquery-3.2.1.slim.min.js'></script>
+        <script src='../../../_assets/js/popper.min.js'></script>
+        <script src='../../../_assets/js/bootstrap.min.js'></script>
+        <!-- for nav-placeholder -->
+        <script src='../../../_assets/js/jquery-1.10.2.js'></script>
+        <script>
+            $(function(){
+                $('#nav-placeholder').load('../../../_assets/html/Navigation.html');
+            });
+        </script>
+
+        <!-- Luxon -->
+        <script src="../js/luxon.min.js"></script>
+        <!-- Polyfill for IE10/11 Support -->
+        <script src="https://cdn.polyfill.io/v2/polyfill.js?features=default,String.prototype.repeat,Array.prototype.find,Array.prototype.findIndex,Math.trunc,Math.sign"></script>
+    </head>
+
+    <body>
+        <div id='nav-placeholder'></div>
+        <br />
+        
+        <div class="col-4">
+            <div>The current Date in Brisbane, Queensland is <span id="Date"></span></div>
+            <div>The current time in Brisbane, Queensland is <span id="Time"></span></div>
+        </div>
+
+        <script>
+            const DateTime = luxon.DateTime;
+            const dt = DateTime.local();
+            document.getElementById("Date").innerHTML = dt.toFormat('dd MMMM yyyy')
+            document.getElementById("Time").innerHTML = dt.toFormat('HH:mm.ss')
+
+            var a = function updateDateTime(){
+                const DateTime = luxon.DateTime;
+                const dt = DateTime.local();
+                document.getElementById("Time").innerHTML = dt.toFormat('HH:mm.ss')
+                setTimeout(a, 1000);
+            }
+
+            $(document).ready(function(){
+                a();
+            });
+        </script>
+
+    </body>
+
+</html>
