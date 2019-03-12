@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+        <title>MaptalksJS</title>
+        <!-- Bootstrap CSS -->
+        <link rel='stylesheet' href='../../../_assets/css/bootstrap.min.css'>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src='../../../_assets/js/jquery-3.2.1.slim.min.js'></script>
+        <script src='../../../_assets/js/popper.min.js'></script>
+        <script src='../../../_assets/js/bootstrap.min.js'></script>
+        <!-- for nav-placeholder -->
+        <script src='../../../_assets/js/jquery-1.10.2.js'></script>
+        <script>
+            $(function(){
+                $('#nav-placeholder').load('../../../_assets/html/Navigation.html');
+            });
+        </script>
+
+        <!-- MaptalksJS -->
+        <link rel="stylesheet" href="../css/maptalks.css">
+        <script src="../js/maptalks.min.js"></script>
+
+        <style type="text/css">
+            html,body{margin:0px;height:100%;width:100%}
+            .container{width:50%;height:50%}
+        </style>
+
+    </head>
+    <body>
+        <div id='nav-placeholder'></div>
+        <br />
+        
+        <h2 class="col-4">Display a Map</h2>
+        <div id="map" class="container col-4"></div>
+        <div class="col-4">**Uses map image and not coordinates**</div>
+
+        <script>
+            var map = new maptalks.Map('map', {
+                center: [-0.113049,51.498568],
+                zoom: 14,
+                baseLayer: new maptalks.TileLayer('base', {
+                urlTemplate: 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
+                subdomains: ['a','b','c','d'],
+                attribution: '&copy; <a href="http://osm.org">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/">CARTO</a>'
+                })
+            });
+        </script>
+    </body>
+</html>
