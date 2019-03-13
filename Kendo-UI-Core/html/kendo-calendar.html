@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+        <title>Kendo-UI-Core Calendar</title>
+        <!-- Bootstrap CSS -->
+        <link rel='stylesheet' href='../../../_assets/css/bootstrap.min.css'>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src='../../../_assets/js/jquery-3.2.1.slim.min.js'></script>
+        <script src='../../../_assets/js/popper.min.js'></script>
+        <script src='../../../_assets/js/bootstrap.min.js'></script>
+        <!-- for nav-placeholder -->
+        <script src='../../../_assets/js/jquery-1.10.2.js'></script>
+        <script>
+            $(function(){
+                $('#nav-placeholder').load('../../../_assets/html/Navigation.html');
+            });
+        </script>
+
+        <!-- KendoUI Core -->
+        <!-- CDN New Version -->
+        <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.common-material.min.css" />
+        <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.material.min.css" />
+        <script src="https://kendo.cdn.telerik.com/2019.1.220/js/jquery.min.js"></script>
+        <script src="https://kendo.cdn.telerik.com/2019.1.220/js/kendo.all.min.js"></script>
+        <!-- Self-Hosted -->
+        <!-- <link rel="stylesheet" href="../css/kendo.common.min.css">
+        <link rel="stylesheet" href="../css/kendo.default.min.css"> -->
+        <!-- <script src="../js/jquery.min.js"></script>
+        <script src="../js/kendo.ui.core.min.js"></script> -->
+
+    </head>
+    <body>
+        <div id='nav-placeholder'></div>
+        <br />
+        
+        <div class="col-8">
+            <div id="calendar"></div>
+        </div>
+        <br /><br />
+
+        <div class="col-4">
+            <h4>Events log</h4>
+            <div class="log" id="log"></div>
+        </div>
+
+        <script>
+            function onChange() {
+                document.getElementById("log").innerHTML = "Selected Date: " + kendo.toString(this.value(), 'dd/MM/yyyy');
+            }
+
+            $("#calendar").kendoCalendar({
+                format: "dd/MM/yyyy",
+                change: onChange,
+            });
+        </script>
+    </body>
+</html>
