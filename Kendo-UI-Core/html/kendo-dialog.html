@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+        <title>Kendo-UI-Core Dialog</title>
+        <!-- Bootstrap CSS -->
+        <link rel='stylesheet' href='../../../_assets/css/bootstrap.min.css'>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src='../../../_assets/js/jquery-3.2.1.slim.min.js'></script>
+        <script src='../../../_assets/js/popper.min.js'></script>
+        <script src='../../../_assets/js/bootstrap.min.js'></script>
+        <!-- for nav-placeholder -->
+        <script src='../../../_assets/js/jquery-1.10.2.js'></script>
+        <script>
+            $(function(){
+                $('#nav-placeholder').load('../../../_assets/html/Navigation.html');
+            });
+        </script>
+
+        <!-- KendoUI Core -->
+        <!-- CDN New Version -->
+        <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.common-material.min.css" />
+        <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.material.min.css" />
+        <script src="https://kendo.cdn.telerik.com/2019.1.220/js/jquery.min.js"></script>
+        <script src="https://kendo.cdn.telerik.com/2019.1.220/js/kendo.all.min.js"></script>
+        <!-- Self-Hosted -->
+        <!-- <link rel="stylesheet" href="../css/kendo.common.min.css">
+        <link rel="stylesheet" href="../css/kendo.default.min.css"> -->
+        <!-- <script src="../js/jquery.min.js"></script>
+        <script src="../js/kendo.ui.core.min.js"></script> -->
+
+    </head>
+    <body>
+        <div id='nav-placeholder'></div>
+        <br />
+        
+        <div class="col-12">
+            <h2>Basic</h2>
+            <div id="dialog"></div>
+            <span id="undo" style="display:none" class="k-button hide-on-narrow">Click here to open the dialog</span>
+        </div>
+        <br /><br />
+
+        <div class="col-12">
+            <h2>Alert</h2>
+            <button id="alertBtn" class="k-button">kendo.alert</button>
+        </div>
+        <br /><br />
+
+        <div class="col-12">
+            <h2>Confirm</h2>
+            <button id="confirmBtn" class="k-button">kendo.confirm</button>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                var dialog = $('#dialog'),
+                    undo = $("#undo");
+        
+                undo.click(function () {
+                    dialog.data("kendoDialog").open();
+                    undo.fadeOut();
+                });
+        
+                function onClose() {
+                    undo.fadeIn();
+                }
+                
+                dialog.kendoDialog({
+                    width: "450px",
+                    title: "Software Update",
+                    closable: false,
+                    modal: false,
+                    content: "<p>A new version of <strong>Kendo UI</strong> is available. Would you like to download and install it now?<p>",
+                    actions: [
+                        { text: 'Skip this version' },
+                        { text: 'Remind me later' },
+                        { text: 'Install update', primary: true }
+                    ],
+                    close: onClose
+                });
+            });
+
+            $("#alertBtn").on("click", function () {
+            kendo.alert("This is a Kendo UI Alert message.");
+            });
+
+            $("#confirmBtn").on("click", function () {
+                kendo.confirm("Are you sure that you want to proceed?").then(function () {
+                    kendo.alert("You chose the Ok action.");
+                }, function () {
+                    kendo.alert("You chose to Cancel action.");
+                });
+            });
+        </script>
+    </body>
+</html>
