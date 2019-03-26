@@ -6,34 +6,39 @@
         <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
         <title>FileSaverJS</title>
         <!-- Bootstrap CSS -->
-        <link rel='stylesheet' href='../../_assets/css/bootstrap.min.css'>
+        <link rel='stylesheet' href='../../../_assets/css/bootstrap.min.css'>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src='../../_assets/js/jquery-3.2.1.slim.min.js'></script>
-        <script src='../../_assets/js/popper.min.js'></script>
-        <script src='../../_assets/js/bootstrap.min.js'></script>
+        <script src='../../../_assets/js/jquery-3.2.1.slim.min.js'></script>
+        <script src='../../../_assets/js/popper.min.js'></script>
+        <script src='../../../_assets/js/bootstrap.min.js'></script>
         <!-- for nav-placeholder -->
-        <script src='../../_assets/js/jquery-1.10.2.js'></script>
+        <script src='../../../_assets/js/jquery-1.10.2.js'></script>
         <script>
             $(function(){
-                $('#nav-placeholder').load('../../_assets/html/Navigation.html');
+                $('#nav-placeholder').load('../../../_assets/html/Navigation.html');
             });
         </script>
+
+        <!-- Filesaver JS -->
+        <script src="../js/filesaver.js"></script>
+
     </head>
     <body>
         <div id='nav-placeholder'></div>
         <br />
         <p>https://eligrey.com/demos/FileSaver.js/</p>
-        <p>https://stackoverflow.com/questions/21997057/how-to-use-filesaver-js</p>
         <button onClick="FSave()">Click to save file</button>
+        <br /><br />
+
+        *Add function to type in text and save text*
+
 
         <script>
             function FSave(){
-            import { saveAs } from 'file-saver';
 
-            var FileSaver = require('file-saver');
             var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
-            FileSaver.saveAs(blob, "hello world.txt");
+            saveAs(blob, "hello world.txt");
             }
         </script>
 
