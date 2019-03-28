@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+        <title>Popmotion Keyframes</title>
+        <!-- Bootstrap CSS -->
+        <link rel='stylesheet' href='../../../_assets/css/bootstrap.min.css'>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src='../../../_assets/js/jquery-3.2.1.slim.min.js'></script>
+        <script src='../../../_assets/js/popper.min.js'></script>
+        <script src='../../../_assets/js/bootstrap.min.js'></script>
+        <!-- for nav-placeholder -->
+        <script src='../../../_assets/js/jquery-1.10.2.js'></script>
+        <script>
+            $(function(){
+                $('#nav-placeholder').load('../../../_assets/html/Navigation.html');
+            });
+        </script>
+
+        <!-- Popmotion -->
+        <script src="../js/popmotion.global.min.js"></script>
+
+        <style>
+        body {
+        --pink: #FF1C68;
+        --green: #14D790;
+        --blue: #198FE3;
+        --black: #21282D;
+        --purple: #9B65DE;
+        color: #222;
+        font-family: 'PT Sans', sans-serif;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        }
+
+        .pen {
+        flex: 1 1 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        margin: 0 auto;
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: 600px;
+        padding: 0 20px;
+        }
+
+        .area {
+        transform-style: preserve-3d;
+        perspective: 500px;
+        width: 400px;
+        height: 300px;
+        }
+
+        .box {
+        width: 100px;
+        height: 100px;
+        background: var(--green);
+        }
+        </style>
+
+    </head>
+    <body>
+        <div id='nav-placeholder'></div>
+        <br />
+        
+        <h2>Keyframes</h2>
+        <div class="pen">
+            <div class="area"><div class="box"></div></div>
+        </div>
+              
+
+        <script>
+            const { easing, keyframes, styler } = window.popmotion;
+
+            const divStyler = styler(document.querySelector('.box'));
+
+            keyframes({
+            values: [
+                { x: 0, y: 0, rotateY: 0, background: '#9B65DE' },
+                { x: 300, y: 0, rotateY: 180, rotateX: 0, background: '#14D790' },
+                { x: 300, y: 200, rotateY: 180, rotateX: 180, background: '#FF1C68' },
+                { x: 0, y: 200, rotateY: 0, rotateX: 180, background: '#198FE3' },
+                { x: 0, y: 0, rotateY: 0, rotateX: 0, background: '#9B65DE' }
+            ],
+            duration: 3000,
+            easings: [easing.easeInOut, easing.easeInOut, easing.easeInOut, easing.easeInOut],
+            loop: Infinity,
+            //times: [0, 0.2, 0.5, 0.6, 1]
+            }).start(divStyler.set);
+        </script>
+    </body>
+</html>
