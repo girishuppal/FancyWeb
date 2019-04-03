@@ -41,7 +41,7 @@
             });
 
             Weather.getCurrent("Brisbane, AU", function(current) {
-                $( "#current" ).html("Brisbane Currenrt Temperature " + current.temperature() + " " + current.conditions());
+                $( "#current" ).html("Brisbane Current Temperature " + current.temperature() + " " + current.conditions());
                 console.log(
     ["currently:",current.temperature(),"and",current.conditions()].join(" ")
   );
